@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Chat - Ejercicio Clase</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #0f172a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* 📱 CELULAR ESTILIZADO */
+      .phone {
+        width: 320px;
+        height: 620px;
+        background: #121212;
+        border: 12px solid #222;
+        border-radius: 45px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+      }
+
+      .notch {
+        width: 140px;
+        height: 26px;
+        background: #222;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        z-index: 20;
+      }
+
+      .status-bar {
+        padding: 14px 25px 5px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: white;
+        background: #1e1e1e;
+      }
+
+      /* CABECERA  */
+      .header {
+        background: #1e1e1e;
+        color: white;
+        padding: 10px 15px 15px 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #333;
+      }
+      .avatar {
+        width: 38px;
+        height: 38px;
+        background: #7c3aed;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      /* ÁREA DE MENSAJES  */
+      .chat-area {
+        flex: 1;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: #121212;
+        overflow-y: auto;
+      }
+      .msg {
+        padding: 10px 14px;
+        border-radius: 18px;
+        font-size: 14px;
+        max-width: 75%;
+        color: white;
+        line-height: 1.4;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .received {
+        background: #2d2d2d;
+        align-self: flex-start;
+        border-bottom-left-radius: 4px;
+      }
+      .sent {
+        background: #7c3aed;
+        align-self: flex-end;
+        border-bottom-right-radius: 4px;
+      }
+
+      /* PIE DE PÁGINA (SEGÚN LA FOTO) */
+      .footer {
+        padding: 12px 15px 30px 15px;
+        background: #1e1e1e;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .input-box {
+        flex: 1;
+        background: #2d2d2d;
+        border: none;
+        padding: 11px 15px;
+        border-radius: 20px;
+        color: white;
+        font-size: 14px;
+        outline: none;
+      }
+      .send-btn {
+        background: #7c3aed;
+        color: white;
+        border: none;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .home-bar {
+        width: 100px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="phone">
+      <div class="notch"></div>
+
+      <div class="status-bar">
+        <span>6:44 PM</span>
+        <span>📶 🔋 100%</span>
+      </div>
+
+      <div class="header">
+        <div class="avatar">👤</div>
+        <div>
+          <div style="font-weight: bold">garulla</div>
+          <div style="font-size: 10px; color: #10b981">● En línea</div>
+        </div>
+      </div>
+
+      <div class="chat-area">
+        <!-- hl-->
+        <div class="msg received">Hola!</div>
+        <div class="msg sent">ey tú</div>
+        <div class="msg sent">Como va</div>
+        <div class="msg received">hoy es el examen de App's</div>
+        <div class="msg sent">Si</div>
+      </div>
+
+      <div class="footer">
+        <input type="text" class="input-box" placeholder="mensaje" />
+        <button class="send-btn">➤</button>
+      </div>
+
+      <div class="home-bar"></div>
+    </div>
+  </body>
+</html>
