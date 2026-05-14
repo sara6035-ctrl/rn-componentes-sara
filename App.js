@@ -15,7 +15,7 @@ export default function App() {
   const [pantallaActual, setPantallaActual] = useState('menu');
   const [verCategoriasActivo, setVerCategoriasActivo] = useState(false);
   
-  // Forzamos dimensiones realistas de teléfono móvil (390 x 844 dp equivalen a un iPhone 13 Pro)
+
   const dimensionesCelular = { width: 390, height: 844 };
   const [sbOculto, setSbOculto] = useState(false);
   const [sbEstilo, setSbEstilo] = useState('light-content');
@@ -67,7 +67,7 @@ export default function App() {
     </View>
   );
 
-  // 3. PANTALLA: INTERFACES NATIVAS Y APIS (CON VER CATEGORÍAS CORREGIDO)
+  // 3. PANTALLA: INTERFACES NATIVAS Y APIS 
   const renderInterfaces = () => (
     <View style={styles.contenidoCelular}>
       <Text style={styles.titulo}>Interfaces nativas y APIs</Text>
@@ -182,7 +182,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  // Enmarca y limita la app al tamaño exacto de un dispositivo móvil centrado en pantalla
+  // Enmarca y limita la app al tamaño exacto de un dispositivo móvil 
   contenedorPantallaCompletaWeb: { flex: 1, backgroundColor: '#f0f2f5', justifyContent: 'center', alignItems: 'center', width: '100vw', height: '100vh' },
   marcoCelularFisico: { width: 390, height: 844, backgroundColor: '#090d16', borderRadius: 40, borderWidth: 12, borderColor: '#1e2538', overflow: 'hidden', shadowColor: '#000', shadowOffset: { width: 0, height: 10 }, shadowOpacity: 0.3, shadowRadius: 20 },
   contenidoCelular: { flex: 1, padding: 20, justifyContent: 'center', width: '100%', height: '100%' },
